@@ -16,13 +16,13 @@ python3 -m http.server 8080
 demox-site/
   index.html       # Landing page
   css/style.css    # All styles
-  js/main.js       # Nav toggle + reveal animations
+  js/main.js       # Nav toggle + footer year
   img/favicon.svg  # Original SVG mark
 ```
 
 ## Deployment
 
-GitHub Pages serves the `main` branch root. Push to `main` and Pages publishes automatically. Public URL is set in the deployment notes once the first build is live.
+GitHub Pages serves the `main` branch root. Push to `main` and Pages publishes automatically at https://frankhli843.github.io/demox-site/.
 
 ## Notes
 

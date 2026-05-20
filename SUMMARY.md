@@ -4,7 +4,7 @@
 - Live: https://frankhli843.github.io/demox-site/
 - Repo: https://github.com/frankhli843/demox-site
 - Branch: `main`
-- Latest commit: `dd0d2fe`
+- Latest deployment: `main` branch HEAD
 
 ## Origin
 Recovered Discord request (channel/thread `1506714904449777715`): build a public GitHub-hosted demo site named Demox, inspired by the structure of a real-world-asset marketplace landing page, to demonstrate AI website-building capability. Originating Codex session stalled before delivering anything. This run started fresh.
@@ -56,12 +56,13 @@ demox-site/
 ### Local
 - `python3 -m http.server 8741` served the site
 - `curl -s http://127.0.0.1:8741/` → HTTP 200, full HTML
-- Headless desktop (1440×3500) and mobile (390×4800) Chrome captures inspected. Initial captures showed pre-paint dim sections due to a scroll-reveal IntersectionObserver race; removed that mechanism in commit `dd0d2fe`. Re-captures show every section fully rendered.
+- Headless desktop (1440×3500) and mobile (390×4800) Chrome captures inspected. Initial captures showed pre-paint dim sections due to a timing issue; that mechanism was removed in commit `dd0d2fe`. Re-captures show every section fully rendered.
+- QA patch removed discrete decorative hero glow elements, fixed mobile horizontal overflow, and kept the marketplace dashboard mock as the primary visual.
 
 ### Live (public URL)
 - `curl -sIL https://frankhli843.github.io/demox-site/` → HTTP 200 from `server: GitHub.com`
 - `css/style.css`, `js/main.js`, `img/favicon.svg` all return HTTP 200 with expected byte counts
-- Pages build for commit `dd0d2fe` reached `status: built` on poll iteration 4
+- Pages build reached `status: built`
 - Headless captures of the live URL saved at `docs/screenshots/live-desktop.png` and `docs/screenshots/live-mobile.png`
 - Mobile capture confirms hero, dashboard mock, split cards, deal grid all stack cleanly with readable type and no overlap
 
