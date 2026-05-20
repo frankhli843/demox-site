@@ -535,10 +535,6 @@ strong { color: var(--text); font-weight: 600; }
   .hero-stats { grid-template-columns: 1fr; }
 }
 
-/* Reveal animation */
-.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-
 /* Focus */
 a:focus-visible, button:focus-visible, .btn:focus-visible {
   outline: 2px solid var(--accent-2);
