@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demox — A marketplace for real-world assets</title>
+  <meta name="description" content="Demox is a regulated marketplace connecting investors with curated, yield-bearing real-world assets. Originate, fund, and manage credit, real estate, and equity deals onchain." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Demox home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-word">Demox</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#marketplace">Marketplace</a>
+        <a href="#investors">For investors</a>
+        <a href="#issuers">For issuers</a>
+        <a href="#process">How it works</a>
+        <a href="#ecosystem">Ecosystem</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="#investors">Invest</a>
+        <a class="btn btn-primary" href="#issuers">Originate</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-menu" id="navMenu" hidden>
+      <a href="#marketplace">Marketplace</a>
+      <a href="#investors">For investors</a>
+      <a href="#issuers">For issuers</a>
+      <a href="#process">How it works</a>
+      <a href="#ecosystem">Ecosystem</a>
+      <div class="nav-menu-cta">
+        <a class="btn btn-ghost" href="#investors">Invest</a>
+        <a class="btn btn-primary" href="#issuers">Originate</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Real-world assets, on a programmable rail</span>
+          <h1>Capital that finally moves at the speed of the internet.</h1>
+          <p class="lede">Demox is a marketplace where credit funds, real estate sponsors, and growth-stage companies raise capital from a global investor base. Settlement is instant, reporting is transparent, and compliance is built into every step.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-lg" href="#investors">Start investing</a>
+            <a class="btn btn-ghost btn-lg" href="#issuers">List a deal</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>$1.4B</strong><span>indicative pipeline</span></div>
+            <div><strong>32</strong><span>active originators</span></div>
+            <div><strong>11.4%</strong><span>avg gross yield, 2025</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="dash">
+            <div class="dash-head">
+              <div class="dash-title">
+                <span class="dash-dot"></span>
+                <span>Demox Marketplace</span>
+              </div>
+              <div class="dash-tabs">
+                <span class="tab active">Live</span>
+                <span class="tab">Upcoming</span>
+                <span class="tab">Closed</span>
+              </div>
+            </div>
+            <div class="dash-kpis">
+              <div>
+                <span class="k-label">Portfolio NAV</span>
+                <span class="k-value">$2,481,907</span>
+                <span class="k-delta positive">+1.84% MTD</span>
+              </div>
+              <div>
+                <span class="k-label">Weighted yield</span>
+                <span class="k-value">10.7%</span>
+                <span class="k-delta neutral">42 positions</span>
+              </div>
+            </div>
+            <div class="dash-chart" role="img" aria-label="Sample portfolio performance chart">
+              <svg viewBox="0 0 320 110" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#7b5cff" stop-opacity="0.55"/>
+                    <stop offset="100%" stop-color="#7b5cff" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,85 C30,70 50,72 70,60 C95,46 120,68 145,55 C170,42 195,50 220,35 C245,22 270,40 295,22 L320,18 L320,110 L0,110 Z" fill="url(#g1)"/>
+                <path d="M0,85 C30,70 50,72 70,60 C95,46 120,68 145,55 C170,42 195,50 220,35 C245,22 270,40 295,22 L320,18" fill="none" stroke="#9d85ff" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="dash-rows">
+              <div class="row">
+                <div>
+                  <span class="row-name">Northbridge Credit Fund III</span>
+                  <span class="row-tag">Private credit · Senior</span>
+                </div>
+                <div class="row-right">
+                  <span class="row-yield">11.8%</span>
+                  <span class="row-meta">36 mo · A-</span>
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <span class="row-name">Brixton Multifamily Series A</span>
+                  <span class="row-tag">Real estate · Equity</span>
+                </div>
+                <div class="row-right">
+                  <span class="row-yield">14.2%</span>
+                  <span class="row-meta">60 mo · IRR</span>
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <span class="row-name">Helios Solar Receivables 24</span>
+                  <span class="row-tag">Infrastructure · Senior</span>
+                </div>
+                <div class="row-right">
+                  <span class="row-yield">9.6%</span>
+                  <span class="row-meta">24 mo · AA</span>
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <span class="row-name">Apex Venture Debt II</span>
+                  <span class="row-tag">Growth · Venture</span>
+                </div>
+                <div class="row-right">
+                  <span class="row-yield">13.1%</span>
+                  <span class="row-meta">48 mo · B+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="marquee">
+      <div class="container marquee">
+        <span>Curated real-world yield</span>
+        <span>Onchain settlement</span>
+        <span>Transparent reporting</span>
+        <span>Regulated jurisdictions</span>
+        <span>Institutional-grade diligence</span>
+        <span>Secondary liquidity</span>
+        <span>Global investor access</span>
+      </div>
+    </section>
+
+    <section class="split" id="investors">
+      <div class="container split-grid">
+        <article class="split-card">
+          <span class="card-eyebrow">For investors</span>
+          <h2>Build a yield portfolio that doesn&rsquo;t track the next equity drawdown.</h2>
+          <ul class="check-list">
+            <li>Access curated private credit, real estate, and growth deals from a single dashboard.</li>
+            <li>Underwrite with full documentation, historical performance, and originator scorecards.</li>
+            <li>Settle, hold, and exit with native digital cash and built-in compliance.</li>
+            <li>Reinvest distributions automatically into laddered tranches.</li>
+          </ul>
+          <a class="btn btn-primary" href="#process">Open an investor account</a>
+        </article>
+        <article class="split-card alt">
+          <span class="card-eyebrow">For issuers</span>
+          <h2>Raise capital from a programmable, global investor base in days, not quarters.</h2>
+          <ul class="check-list">
+            <li>List senior debt, mezz, equity, or revenue-share structures with our templated docs.</li>
+            <li>Plug in service providers: trustees, auditors, KYC, and wallet custody.</li>
+            <li>Distribute reports and waterfall payments automatically to every holder.</li>
+            <li>Tap a secondary market that keeps your cap table clean.</li>
+          </ul>
+          <a class="btn btn-primary" href="#process">Apply to originate</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="marketplace" id="marketplace">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">Live marketplace</span>
+          <h2>Deals built around real cash flows.</h2>
+          <p>Browse a curated set of opportunities across credit, real estate, infrastructure, and growth. Every listing carries underwriting memos, originator history, and a structured risk score.</p>
+        </header>
+        <div class="deal-grid">
+          <article class="deal-card">
+            <div class="deal-head">
+              <span class="deal-tag tag-credit">Private credit</span>
+              <span class="deal-rating">A-</span>
+            </div>
+            <h3>Northbridge Credit Fund III</h3>
+            <p>Senior secured loans to mid-market industrial sponsors across the US Midwest. Floating rate, 36-month tenor, monthly distributions.</p>
+            <dl class="deal-metrics">
+              <div><dt>Target yield</dt><dd>11.8%</dd></div>
+              <div><dt>Tenor</dt><dd>36 mo</dd></div>
+              <div><dt>Min ticket</dt><dd>$10k</dd></div>
+              <div><dt>Allocation</dt><dd>62% filled</dd></div>
+            </dl>
+            <div class="bar"><span style="width:62%"></span></div>
+            <a class="btn btn-ghost btn-sm" href="#process">View deal memo</a>
+          </article>
+          <article class="deal-card">
+            <div class="deal-head">
+              <span class="deal-tag tag-realestate">Real estate</span>
+              <span class="deal-rating">IRR target</span>
+            </div>
+            <h3>Brixton Multifamily Series A</h3>
+            <p>Value-add multifamily portfolio across the Sun Belt. Equity participation with refinance event at month 36 and full exit at month 60.</p>
+            <dl class="deal-metrics">
+              <div><dt>Target IRR</dt><dd>14.2%</dd></div>
+              <div><dt>Hold</dt><dd>60 mo</dd></div>
+              <div><dt>Min ticket</dt><dd>$25k</dd></div>
+              <div><dt>Allocation</dt><dd>41% filled</dd></div>
+            </dl>
+            <div class="bar"><span style="width:41%"></span></div>
+            <a class="btn btn-ghost btn-sm" href="#process">View deal memo</a>
+          </article>
+          <article class="deal-card">
+            <div class="deal-head">
+              <span class="deal-tag tag-infra">Infrastructure</span>
+              <span class="deal-rating">AA</span>
+            </div>
+            <h3>Helios Solar Receivables 24</h3>
+            <p>Senior position in a pool of contracted solar power purchase agreements. Investment-grade offtakers, fully amortising principal.</p>
+            <dl class="deal-metrics">
+              <div><dt>Target yield</dt><dd>9.6%</dd></div>
+              <div><dt>Tenor</dt><dd>24 mo</dd></div>
+              <div><dt>Min ticket</dt><dd>$5k</dd></div>
+              <div><dt>Allocation</dt><dd>78% filled</dd></div>
+            </dl>
+            <div class="bar"><span style="width:78%"></span></div>
+            <a class="btn btn-ghost btn-sm" href="#process">View deal memo</a>
+          </article>
+          <article class="deal-card">
+            <div class="deal-head">
+              <span class="deal-tag tag-growth">Growth</span>
+              <span class="deal-rating">B+</span>
+            </div>
+            <h3>Apex Venture Debt II</h3>
+            <p>Senior venture debt to Series B and C SaaS companies with $20M+ ARR. Warrants attached, quarterly coupon, secured against ARR.</p>
+            <dl class="deal-metrics">
+              <div><dt>Target yield</dt><dd>13.1%</dd></div>
+              <div><dt>Tenor</dt><dd>48 mo</dd></div>
+              <div><dt>Min ticket</dt><dd>$50k</dd></div>
+              <div><dt>Allocation</dt><dd>23% filled</dd></div>
+            </dl>
+            <div class="bar"><span style="width:23%"></span></div>
+            <a class="btn btn-ghost btn-sm" href="#process">View deal memo</a>
+          </article>
+          <article class="deal-card">
+            <div class="deal-head">
+              <span class="deal-tag tag-credit">Private credit</span>
+              <span class="deal-rating">A</span>
+            </div>
+            <h3>Meridian Trade Finance Pool</h3>
+            <p>Short-duration trade finance receivables originated across LATAM agribusiness exporters. 90 to 180 day rotations.</p>
+            <dl class="deal-metrics">
+              <div><dt>Target yield</dt><dd>10.4%</dd></div>
+              <div><dt>Tenor</dt><dd>12 mo</dd></div>
+              <div><dt>Min ticket</dt><dd>$10k</dd></div>
+              <div><dt>Allocation</dt><dd>54% filled</dd></div>
+            </dl>
+            <div class="bar"><span style="width:54%"></span></div>
+            <a class="btn btn-ghost btn-sm" href="#process">View deal memo</a>
+          </article>
+          <article class="deal-card">
+            <div class="deal-head">
+              <span class="deal-tag tag-realestate">Real estate</span>
+              <span class="deal-rating">A-</span>
+            </div>
+            <h3>Atlas Industrial Income</h3>
+            <p>Senior debt against a Class B logistics portfolio anchored by investment-grade tenants. Quarterly cash distributions.</p>
+            <dl class="deal-metrics">
+              <div><dt>Target yield</dt><dd>8.9%</dd></div>
+              <div><dt>Tenor</dt><dd>60 mo</dd></div>
+              <div><dt>Min ticket</dt><dd>$15k</dd></div>
+              <div><dt>Allocation</dt><dd>88% filled</dd></div>
+            </dl>
+            <div class="bar"><span style="width:88%"></span></div>
+            <a class="btn btn-ghost btn-sm" href="#process">View deal memo</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories" id="categories">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">Asset universe</span>
+          <h2>One marketplace, every real-world cash flow.</h2>
+          <p>From short-duration receivables to multi-year equity participations, Demox structures deals so each risk and tenor lives in its own clearly priced position.</p>
+        </header>
+        <div class="cat-grid">
+          <div class="cat-card">
+            <span class="cat-icon" aria-hidden="true">&#9670;</span>
+            <h3>Private credit</h3>
+            <p>Senior secured loans, mezzanine debt, and direct lending pools sourced from specialist originators.</p>
+          </div>
+          <div class="cat-card">
+            <span class="cat-icon" aria-hidden="true">&#9671;</span>
+            <h3>Real estate</h3>
+            <p>Stabilised income strategies, value-add equity, and bridge debt across residential, industrial, and hospitality.</p>
+          </div>
+          <div class="cat-card">
+            <span class="cat-icon" aria-hidden="true">&#9650;</span>
+            <h3>Infrastructure</h3>
+            <p>Long-duration cash flows from energy transition, transport, and digital infrastructure with contracted offtakers.</p>
+          </div>
+          <div class="cat-card">
+            <span class="cat-icon" aria-hidden="true">&#9728;</span>
+            <h3>Growth + venture debt</h3>
+            <p>Capital for venture-backed companies that prefer senior structures over additional equity dilution.</p>
+          </div>
+          <div class="cat-card">
+            <span class="cat-icon" aria-hidden="true">&#9733;</span>
+            <h3>Trade + receivables</h3>
+            <p>Short-tenor working capital pools backed by audited invoices from creditworthy global counterparties.</p>
+          </div>
+          <div class="cat-card">
+            <span class="cat-icon" aria-hidden="true">&#9678;</span>
+            <h3>Revenue share</h3>
+            <p>Royalty and revenue-share structures that align capital with operator performance and unlock new sectors.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2>From onboarding to distribution, the workflow is the product.</h2>
+          <p>Whether you arrive as an investor or an issuer, the same primitives carry you from intent to settled position.</p>
+        </header>
+        <ol class="steps">
+          <li>
+            <span class="step-num">01</span>
+            <h3>Verify once.</h3>
+            <p>Complete a single KYC and accreditation flow that satisfies every deal, every jurisdiction. Identity, wallet, and entity records live with you, not the originator.</p>
+          </li>
+          <li>
+            <span class="step-num">02</span>
+            <h3>Browse curated deals.</h3>
+            <p>Filter by tenor, yield, asset class, jurisdiction, or rating. Open the full memo, run scenarios, and add the position to a watchlist.</p>
+          </li>
+          <li>
+            <span class="step-num">03</span>
+            <h3>Subscribe and settle.</h3>
+            <p>Allocate digital cash, sign documentation, and receive a tokenised position in one signed transaction. No wires, no paper, no waiting.</p>
+          </li>
+          <li>
+            <span class="step-num">04</span>
+            <h3>Track, report, exit.</h3>
+            <p>Receive distributions, reporting, and tax statements automatically. Trade out on the secondary market or hold to maturity. Either way the data follows the asset.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="ecosystem" id="ecosystem">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">Ecosystem</span>
+          <h2>Built with the partners that keep capital markets honest.</h2>
+          <p>Demox integrates with regulated custodians, fund administrators, trustees, auditors, and identity providers. Our standards are designed so each role can be operated by any qualified institution.</p>
+        </header>
+        <div class="eco-grid">
+          <div class="eco-card">
+            <span class="eco-tag">Custody</span>
+            <p>Qualified custodians safeguarding investor wallets, deal escrow, and waterfall accounts under segregated mandates.</p>
+          </div>
+          <div class="eco-card">
+            <span class="eco-tag">Fund administration</span>
+            <p>Independent administrators producing NAVs, investor statements, and distribution waterfalls on a continuous basis.</p>
+          </div>
+          <div class="eco-card">
+            <span class="eco-tag">Audit + assurance</span>
+            <p>Big-four-aligned audit firms providing financial assertions and proof-of-reserve attestations on every issuance.</p>
+          </div>
+          <div class="eco-card">
+            <span class="eco-tag">Identity + compliance</span>
+            <p>Accredited identity providers operating perpetual KYC, sanctions screening, and accreditation checks.</p>
+          </div>
+          <div class="eco-card">
+            <span class="eco-tag">Trustees</span>
+            <p>Independent trustees representing investor interests and enforcing covenants across every issuance.</p>
+          </div>
+          <div class="eco-card">
+            <span class="eco-tag">Legal counsel</span>
+            <p>Specialist securities and structured finance counsel reviewing every deal template and amendment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div>
+          <span class="eyebrow">Ready when you are</span>
+          <h2>Put your capital, or your cap table, on a better rail.</h2>
+          <p>Investors get curated yield. Issuers get a global subscription book. Both get the operating system that turns paperwork into a few clicks.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="#investors">Become an investor</a>
+          <a class="btn btn-ghost btn-lg" href="#issuers">Apply as an issuer</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Demox home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-word">Demox</span>
+        </a>
+        <p>A regulated marketplace for real-world asset investing. Built for institutions, accessible to qualified individuals.</p>
+      </div>
+      <div>
+        <h4>Marketplace</h4>
+        <ul>
+          <li><a href="#marketplace">Live deals</a></li>
+          <li><a href="#categories">Asset classes</a></li>
+          <li><a href="#process">How it works</a></li>
+          <li><a href="#ecosystem">Service providers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#top">About Demox</a></li>
+          <li><a href="#top">Newsroom</a></li>
+          <li><a href="#top">Careers</a></li>
+          <li><a href="#top">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#top">Terms of service</a></li>
+          <li><a href="#top">Privacy policy</a></li>
+          <li><a href="#top">Disclosures</a></li>
+          <li><a href="#top">Risk factors</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container foot-fine">
+      <p>© <span id="year"></span> Demox Labs. This site is a demonstration project. Nothing on this page constitutes an offer to sell or a solicitation to buy any security. Any investment in private placements carries risk of loss.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
