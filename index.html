@@ -3,464 +3,367 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Demox — A marketplace for real-world assets</title>
-  <meta name="description" content="Demox is a regulated marketplace connecting investors with curated, yield-bearing real-world assets. Originate, fund, and manage credit, real estate, and equity deals onchain." />
+  <title>TKN Markets — A tokenized capital marketplace for private business</title>
+  <meta name="description" content="TKN Markets is building the full-stack platform for issuance, structuring, distribution, and future liquidity across tokenized private assets, beginning with franchise and operating-business cash flows." />
+  <meta name="theme-color" content="#06122d" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <meta property="og:title" content="TKN Markets" />
+  <meta property="og:description" content="The infrastructure layer for tokenized capital markets." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
 </head>
 <body>
-  <header class="nav" id="nav">
-    <div class="nav-inner">
-      <a class="brand" href="#top" aria-label="Demox home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-word">Demox</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#marketplace">Marketplace</a>
-        <a href="#investors">For investors</a>
-        <a href="#issuers">For issuers</a>
-        <a href="#process">How it works</a>
-        <a href="#ecosystem">Ecosystem</a>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-orbs" aria-hidden="true">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="blob blob-left"></div>
+      <div class="blob blob-right"></div>
+    </div>
+
+    <div class="hero-inner">
+      <nav class="nav" id="nav" aria-label="Primary">
+        <div class="nav-brand">
+          <div class="nav-logo" aria-hidden="true"><span>TKN</span></div>
+          <div class="nav-name">
+            <div class="title">TKN MARKETS</div>
+            <div class="sub">Tokenized capital markets infrastructure</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="#platform">Platform</a>
+          <a href="#ecosystem">Ecosystem</a>
+          <a href="#how-it-works">How it Works</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7" x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="20" y2="12"/>
+            <line x1="4" y1="17" x2="20" y2="17"/>
+          </svg>
+        </button>
       </nav>
-      <div class="nav-cta">
-        <a class="btn btn-ghost" href="#investors">Invest</a>
-        <a class="btn btn-primary" href="#issuers">Originate</a>
-      </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="nav-menu" id="navMenu" hidden>
-      <a href="#marketplace">Marketplace</a>
-      <a href="#investors">For investors</a>
-      <a href="#issuers">For issuers</a>
-      <a href="#process">How it works</a>
-      <a href="#ecosystem">Ecosystem</a>
-      <div class="nav-menu-cta">
-        <a class="btn btn-ghost" href="#investors">Invest</a>
-        <a class="btn btn-primary" href="#issuers">Originate</a>
-      </div>
-    </div>
-  </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="grid-overlay"></div>
-      </div>
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Real-world assets, on a programmable rail</span>
-          <h1>Capital that finally moves at the speed of the internet.</h1>
-          <p class="lede">Demox is a marketplace where credit funds, real estate sponsors, and growth-stage companies raise capital from a global investor base. Settlement is instant, reporting is transparent, and compliance is built into every step.</p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary btn-lg" href="#investors">Start investing</a>
-            <a class="btn btn-ghost btn-lg" href="#issuers">List a deal</a>
-          </div>
-          <div class="hero-stats">
-            <div><strong>$1.4B</strong><span>indicative pipeline</span></div>
-            <div><strong>32</strong><span>active originators</span></div>
-            <div><strong>11.4%</strong><span>avg gross yield, 2025</span></div>
-          </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="dash">
-            <div class="dash-head">
-              <div class="dash-title">
-                <span class="dash-dot"></span>
-                <span>Demox Marketplace</span>
-              </div>
-              <div class="dash-tabs">
-                <span class="tab active">Live</span>
-                <span class="tab">Upcoming</span>
-                <span class="tab">Closed</span>
-              </div>
-            </div>
-            <div class="dash-kpis">
-              <div>
-                <span class="k-label">Portfolio NAV</span>
-                <span class="k-value">$2,481,907</span>
-                <span class="k-delta positive">+1.84% MTD</span>
-              </div>
-              <div>
-                <span class="k-label">Weighted yield</span>
-                <span class="k-value">10.7%</span>
-                <span class="k-delta neutral">42 positions</span>
-              </div>
-            </div>
-            <div class="dash-chart" role="img" aria-label="Sample portfolio performance chart">
-              <svg viewBox="0 0 320 110" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stop-color="#7b5cff" stop-opacity="0.55"/>
-                    <stop offset="100%" stop-color="#7b5cff" stop-opacity="0"/>
-                  </linearGradient>
-                </defs>
-                <path d="M0,85 C30,70 50,72 70,60 C95,46 120,68 145,55 C170,42 195,50 220,35 C245,22 270,40 295,22 L320,18 L320,110 L0,110 Z" fill="url(#g1)"/>
-                <path d="M0,85 C30,70 50,72 70,60 C95,46 120,68 145,55 C170,42 195,50 220,35 C245,22 270,40 295,22 L320,18" fill="none" stroke="#9d85ff" stroke-width="2"/>
-              </svg>
-            </div>
-            <div class="dash-rows">
-              <div class="row">
-                <div>
-                  <span class="row-name">Northbridge Credit Fund III</span>
-                  <span class="row-tag">Private credit · Senior</span>
-                </div>
-                <div class="row-right">
-                  <span class="row-yield">11.8%</span>
-                  <span class="row-meta">36 mo · A-</span>
-                </div>
-              </div>
-              <div class="row">
-                <div>
-                  <span class="row-name">Brixton Multifamily Series A</span>
-                  <span class="row-tag">Real estate · Equity</span>
-                </div>
-                <div class="row-right">
-                  <span class="row-yield">14.2%</span>
-                  <span class="row-meta">60 mo · IRR</span>
-                </div>
-              </div>
-              <div class="row">
-                <div>
-                  <span class="row-name">Helios Solar Receivables 24</span>
-                  <span class="row-tag">Infrastructure · Senior</span>
-                </div>
-                <div class="row-right">
-                  <span class="row-yield">9.6%</span>
-                  <span class="row-meta">24 mo · AA</span>
-                </div>
-              </div>
-              <div class="row">
-                <div>
-                  <span class="row-name">Apex Venture Debt II</span>
-                  <span class="row-tag">Growth · Venture</span>
-                </div>
-                <div class="row-right">
-                  <span class="row-yield">13.1%</span>
-                  <span class="row-meta">48 mo · B+</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="band" id="marquee">
-      <div class="container marquee">
-        <span>Curated real-world yield</span>
-        <span>Onchain settlement</span>
-        <span>Transparent reporting</span>
-        <span>Regulated jurisdictions</span>
-        <span>Institutional-grade diligence</span>
-        <span>Secondary liquidity</span>
-        <span>Global investor access</span>
-      </div>
-    </section>
-
-    <section class="split" id="investors">
-      <div class="container split-grid">
-        <article class="split-card">
-          <span class="card-eyebrow">For investors</span>
-          <h2>Build a yield portfolio that doesn&rsquo;t track the next equity drawdown.</h2>
-          <ul class="check-list">
-            <li>Access curated private credit, real estate, and growth deals from a single dashboard.</li>
-            <li>Underwrite with full documentation, historical performance, and originator scorecards.</li>
-            <li>Settle, hold, and exit with native digital cash and built-in compliance.</li>
-            <li>Reinvest distributions automatically into laddered tranches.</li>
-          </ul>
-          <a class="btn btn-primary" href="#process">Open an investor account</a>
-        </article>
-        <article class="split-card alt">
-          <span class="card-eyebrow">For issuers</span>
-          <h2>Raise capital from a programmable, global investor base in days, not quarters.</h2>
-          <ul class="check-list">
-            <li>List senior debt, mezz, equity, or revenue-share structures with our templated docs.</li>
-            <li>Plug in service providers: trustees, auditors, KYC, and wallet custody.</li>
-            <li>Distribute reports and waterfall payments automatically to every holder.</li>
-            <li>Tap a secondary market that keeps your cap table clean.</li>
-          </ul>
-          <a class="btn btn-primary" href="#process">Apply to originate</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="marketplace" id="marketplace">
-      <div class="container">
-        <header class="section-head">
-          <span class="eyebrow">Live marketplace</span>
-          <h2>Deals built around real cash flows.</h2>
-          <p>Browse a curated set of opportunities across credit, real estate, infrastructure, and growth. Every listing carries underwriting memos, originator history, and a structured risk score.</p>
-        </header>
-        <div class="deal-grid">
-          <article class="deal-card">
-            <div class="deal-head">
-              <span class="deal-tag tag-credit">Private credit</span>
-              <span class="deal-rating">A-</span>
-            </div>
-            <h3>Northbridge Credit Fund III</h3>
-            <p>Senior secured loans to mid-market industrial sponsors across the US Midwest. Floating rate, 36-month tenor, monthly distributions.</p>
-            <dl class="deal-metrics">
-              <div><dt>Target yield</dt><dd>11.8%</dd></div>
-              <div><dt>Tenor</dt><dd>36 mo</dd></div>
-              <div><dt>Min ticket</dt><dd>$10k</dd></div>
-              <div><dt>Allocation</dt><dd>62% filled</dd></div>
-            </dl>
-            <div class="bar"><span style="width:62%"></span></div>
-            <a class="btn btn-ghost btn-sm" href="#process">View deal memo</a>
-          </article>
-          <article class="deal-card">
-            <div class="deal-head">
-              <span class="deal-tag tag-realestate">Real estate</span>
-              <span class="deal-rating">IRR target</span>
-            </div>
-            <h3>Brixton Multifamily Series A</h3>
-            <p>Value-add multifamily portfolio across the Sun Belt. Equity participation with refinance event at month 36 and full exit at month 60.</p>
-            <dl class="deal-metrics">
-              <div><dt>Target IRR</dt><dd>14.2%</dd></div>
-              <div><dt>Hold</dt><dd>60 mo</dd></div>
-              <div><dt>Min ticket</dt><dd>$25k</dd></div>
-              <div><dt>Allocation</dt><dd>41% filled</dd></div>
-            </dl>
-            <div class="bar"><span style="width:41%"></span></div>
-            <a class="btn btn-ghost btn-sm" href="#process">View deal memo</a>
-          </article>
-          <article class="deal-card">
-            <div class="deal-head">
-              <span class="deal-tag tag-infra">Infrastructure</span>
-              <span class="deal-rating">AA</span>
-            </div>
-            <h3>Helios Solar Receivables 24</h3>
-            <p>Senior position in a pool of contracted solar power purchase agreements. Investment-grade offtakers, fully amortising principal.</p>
-            <dl class="deal-metrics">
-              <div><dt>Target yield</dt><dd>9.6%</dd></div>
-              <div><dt>Tenor</dt><dd>24 mo</dd></div>
-              <div><dt>Min ticket</dt><dd>$5k</dd></div>
-              <div><dt>Allocation</dt><dd>78% filled</dd></div>
-            </dl>
-            <div class="bar"><span style="width:78%"></span></div>
-            <a class="btn btn-ghost btn-sm" href="#process">View deal memo</a>
-          </article>
-          <article class="deal-card">
-            <div class="deal-head">
-              <span class="deal-tag tag-growth">Growth</span>
-              <span class="deal-rating">B+</span>
-            </div>
-            <h3>Apex Venture Debt II</h3>
-            <p>Senior venture debt to Series B and C SaaS companies with $20M+ ARR. Warrants attached, quarterly coupon, secured against ARR.</p>
-            <dl class="deal-metrics">
-              <div><dt>Target yield</dt><dd>13.1%</dd></div>
-              <div><dt>Tenor</dt><dd>48 mo</dd></div>
-              <div><dt>Min ticket</dt><dd>$50k</dd></div>
-              <div><dt>Allocation</dt><dd>23% filled</dd></div>
-            </dl>
-            <div class="bar"><span style="width:23%"></span></div>
-            <a class="btn btn-ghost btn-sm" href="#process">View deal memo</a>
-          </article>
-          <article class="deal-card">
-            <div class="deal-head">
-              <span class="deal-tag tag-credit">Private credit</span>
-              <span class="deal-rating">A</span>
-            </div>
-            <h3>Meridian Trade Finance Pool</h3>
-            <p>Short-duration trade finance receivables originated across LATAM agribusiness exporters. 90 to 180 day rotations.</p>
-            <dl class="deal-metrics">
-              <div><dt>Target yield</dt><dd>10.4%</dd></div>
-              <div><dt>Tenor</dt><dd>12 mo</dd></div>
-              <div><dt>Min ticket</dt><dd>$10k</dd></div>
-              <div><dt>Allocation</dt><dd>54% filled</dd></div>
-            </dl>
-            <div class="bar"><span style="width:54%"></span></div>
-            <a class="btn btn-ghost btn-sm" href="#process">View deal memo</a>
-          </article>
-          <article class="deal-card">
-            <div class="deal-head">
-              <span class="deal-tag tag-realestate">Real estate</span>
-              <span class="deal-rating">A-</span>
-            </div>
-            <h3>Atlas Industrial Income</h3>
-            <p>Senior debt against a Class B logistics portfolio anchored by investment-grade tenants. Quarterly cash distributions.</p>
-            <dl class="deal-metrics">
-              <div><dt>Target yield</dt><dd>8.9%</dd></div>
-              <div><dt>Tenor</dt><dd>60 mo</dd></div>
-              <div><dt>Min ticket</dt><dd>$15k</dd></div>
-              <div><dt>Allocation</dt><dd>88% filled</dd></div>
-            </dl>
-            <div class="bar"><span style="width:88%"></span></div>
-            <a class="btn btn-ghost btn-sm" href="#process">View deal memo</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="categories" id="categories">
-      <div class="container">
-        <header class="section-head">
-          <span class="eyebrow">Asset universe</span>
-          <h2>One marketplace, every real-world cash flow.</h2>
-          <p>From short-duration receivables to multi-year equity participations, Demox structures deals so each risk and tenor lives in its own clearly priced position.</p>
-        </header>
-        <div class="cat-grid">
-          <div class="cat-card">
-            <span class="cat-icon" aria-hidden="true">&#9670;</span>
-            <h3>Private credit</h3>
-            <p>Senior secured loans, mezzanine debt, and direct lending pools sourced from specialist originators.</p>
-          </div>
-          <div class="cat-card">
-            <span class="cat-icon" aria-hidden="true">&#9671;</span>
-            <h3>Real estate</h3>
-            <p>Stabilised income strategies, value-add equity, and bridge debt across residential, industrial, and hospitality.</p>
-          </div>
-          <div class="cat-card">
-            <span class="cat-icon" aria-hidden="true">&#9650;</span>
-            <h3>Infrastructure</h3>
-            <p>Long-duration cash flows from energy transition, transport, and digital infrastructure with contracted offtakers.</p>
-          </div>
-          <div class="cat-card">
-            <span class="cat-icon" aria-hidden="true">&#9728;</span>
-            <h3>Growth + venture debt</h3>
-            <p>Capital for venture-backed companies that prefer senior structures over additional equity dilution.</p>
-          </div>
-          <div class="cat-card">
-            <span class="cat-icon" aria-hidden="true">&#9733;</span>
-            <h3>Trade + receivables</h3>
-            <p>Short-tenor working capital pools backed by audited invoices from creditworthy global counterparties.</p>
-          </div>
-          <div class="cat-card">
-            <span class="cat-icon" aria-hidden="true">&#9678;</span>
-            <h3>Revenue share</h3>
-            <p>Royalty and revenue-share structures that align capital with operator performance and unlock new sectors.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="process" id="process">
-      <div class="container">
-        <header class="section-head">
-          <span class="eyebrow">How it works</span>
-          <h2>From onboarding to distribution, the workflow is the product.</h2>
-          <p>Whether you arrive as an investor or an issuer, the same primitives carry you from intent to settled position.</p>
-        </header>
-        <ol class="steps">
-          <li>
-            <span class="step-num">01</span>
-            <h3>Verify once.</h3>
-            <p>Complete a single KYC and accreditation flow that satisfies every deal, every jurisdiction. Identity, wallet, and entity records live with you, not the originator.</p>
-          </li>
-          <li>
-            <span class="step-num">02</span>
-            <h3>Browse curated deals.</h3>
-            <p>Filter by tenor, yield, asset class, jurisdiction, or rating. Open the full memo, run scenarios, and add the position to a watchlist.</p>
-          </li>
-          <li>
-            <span class="step-num">03</span>
-            <h3>Subscribe and settle.</h3>
-            <p>Allocate digital cash, sign documentation, and receive a tokenised position in one signed transaction. No wires, no paper, no waiting.</p>
-          </li>
-          <li>
-            <span class="step-num">04</span>
-            <h3>Track, report, exit.</h3>
-            <p>Receive distributions, reporting, and tax statements automatically. Trade out on the secondary market or hold to maturity. Either way the data follows the asset.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="ecosystem" id="ecosystem">
-      <div class="container">
-        <header class="section-head">
-          <span class="eyebrow">Ecosystem</span>
-          <h2>Built with the partners that keep capital markets honest.</h2>
-          <p>Demox integrates with regulated custodians, fund administrators, trustees, auditors, and identity providers. Our standards are designed so each role can be operated by any qualified institution.</p>
-        </header>
-        <div class="eco-grid">
-          <div class="eco-card">
-            <span class="eco-tag">Custody</span>
-            <p>Qualified custodians safeguarding investor wallets, deal escrow, and waterfall accounts under segregated mandates.</p>
-          </div>
-          <div class="eco-card">
-            <span class="eco-tag">Fund administration</span>
-            <p>Independent administrators producing NAVs, investor statements, and distribution waterfalls on a continuous basis.</p>
-          </div>
-          <div class="eco-card">
-            <span class="eco-tag">Audit + assurance</span>
-            <p>Big-four-aligned audit firms providing financial assertions and proof-of-reserve attestations on every issuance.</p>
-          </div>
-          <div class="eco-card">
-            <span class="eco-tag">Identity + compliance</span>
-            <p>Accredited identity providers operating perpetual KYC, sanctions screening, and accreditation checks.</p>
-          </div>
-          <div class="eco-card">
-            <span class="eco-tag">Trustees</span>
-            <p>Independent trustees representing investor interests and enforcing covenants across every issuance.</p>
-          </div>
-          <div class="eco-card">
-            <span class="eco-tag">Legal counsel</span>
-            <p>Specialist securities and structured finance counsel reviewing every deal template and amendment.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="container cta-inner">
+      <div class="hero-grid">
         <div>
-          <span class="eyebrow">Ready when you are</span>
-          <h2>Put your capital, or your cap table, on a better rail.</h2>
-          <p>Investors get curated yield. Issuers get a global subscription book. Both get the operating system that turns paperwork into a few clicks.</p>
+          <div class="eyebrow-chip">The infrastructure layer for tokenized capital markets</div>
+          <h1>A tokenized capital marketplace for <span class="accent">private business</span>.</h1>
+          <p class="hero-lede">
+            TKN Markets is building the full-stack platform for issuance, structuring, distribution, and future liquidity across tokenized private assets, beginning with franchise and operating-business cash flows.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button">Request Investor Deck</button>
+            <button class="btn btn-ghost" type="button">Explore the Platform</button>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card"><div class="v">Institutional</div><div class="l">Brand posture</div></div>
+            <div class="stat-card"><div class="v">Full-stack</div><div class="l">Platform model</div></div>
+            <div class="stat-card"><div class="v">RWA</div><div class="l">Asset focus</div></div>
+            <div class="stat-card"><div class="v">Yield + Liquidity</div><div class="l">Investor promise</div></div>
+          </div>
         </div>
-        <div class="cta-actions">
-          <a class="btn btn-primary btn-lg" href="#investors">Become an investor</a>
-          <a class="btn btn-ghost btn-lg" href="#issuers">Apply as an issuer</a>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="foot-brand">
-        <a class="brand" href="#top" aria-label="Demox home">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-word">Demox</span>
-        </a>
-        <p>A regulated marketplace for real-world asset investing. Built for institutions, accessible to qualified individuals.</p>
-      </div>
-      <div>
-        <h4>Marketplace</h4>
-        <ul>
-          <li><a href="#marketplace">Live deals</a></li>
-          <li><a href="#categories">Asset classes</a></li>
-          <li><a href="#process">How it works</a></li>
-          <li><a href="#ecosystem">Service providers</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#top">About Demox</a></li>
-          <li><a href="#top">Newsroom</a></li>
-          <li><a href="#top">Careers</a></li>
-          <li><a href="#top">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#top">Terms of service</a></li>
-          <li><a href="#top">Privacy policy</a></li>
-          <li><a href="#top">Disclosures</a></li>
-          <li><a href="#top">Risk factors</a></li>
-        </ul>
+        <div class="platform-card-wrap">
+          <div class="platform-card-glow" aria-hidden="true"></div>
+          <div class="platform-card">
+            <div class="platform-card-head">
+              <div>
+                <div class="label">Platform Overview</div>
+                <div class="name">TKN Markets</div>
+              </div>
+              <div class="pill">Full Stack</div>
+            </div>
+            <div class="platform-card-stack">
+              <div class="core-tile">
+                <div class="label">Core Platform</div>
+                <div class="value">Issuance + Structuring + Distribution</div>
+              </div>
+              <div class="dual-grid">
+                <div class="dual-tile">
+                  <div class="label">Operators</div>
+                  <div class="value">Growth capital and recap solutions</div>
+                </div>
+                <div class="dual-tile">
+                  <div class="label">Investors</div>
+                  <div class="value">Yield, reporting, and future liquidity</div>
+                </div>
+              </div>
+              <div class="ecosystem-tile">
+                <div class="label">Ecosystem Layers</div>
+                <div class="ecosystem-grid">
+                  <div class="item">TKN Capital</div>
+                  <div class="item">TKN Exchange</div>
+                  <div class="item">TKN Rail</div>
+                  <div class="item">TKN Struct</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="container foot-fine">
-      <p>© <span id="year"></span> Demox Labs. This site is a demonstration project. Nothing on this page constitutes an offer to sell or a solicitation to buy any security. Any investment in private placements carries risk of loss.</p>
+  </section>
+
+  <div class="nav-mobile" id="navMobile" aria-hidden="true">
+    <div class="nav-mobile-inner">
+      <a href="#platform">Platform</a>
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="#how-it-works">How it Works</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- WHY NOW -->
+  <section id="why-now" class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">Why Now</div>
+      <h2>Private markets are at an inflection point.</h2>
+      <p>Structural shifts in capital markets, technology, and investor demand are converging to unlock a new category: programmable, yield-bearing private assets.</p>
+    </div>
+    <div class="card-grid cols-3">
+      <div class="feature-card">
+        <div class="icon-square" aria-hidden="true"></div>
+        <h3>Massive, illiquid market</h3>
+        <p>Private markets represent trillions in assets with limited access, transparency, and liquidity for investors.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-square" aria-hidden="true"></div>
+        <h3>Technology unlock</h3>
+        <p>Tokenization enables programmable ownership, automated distributions, and new forms of financial product design.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-square" aria-hidden="true"></div>
+        <h3>Investor demand shift</h3>
+        <p>Capital is moving toward yield-generating assets beyond public markets, with demand for access and liquidity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INITIAL MARKET FOCUS -->
+  <section id="franchise" class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">Initial Market Focus</div>
+      <h2>Franchise cash flows → structured → liquid investment products</h2>
+      <p>A $900B+ revenue ecosystem with $20–40B annually in capital needs — but no true capital markets layer.</p>
+    </div>
+
+    <div class="franchise-diagram">
+      <div class="franchise-glow" aria-hidden="true"></div>
+      <div class="franchise-grid">
+        <div class="layer-stack">
+          <div class="layer-label">Source Layer</div>
+          <div class="layer-item">Franchise Groups</div>
+          <div class="layer-item">Multi-unit Operators</div>
+          <div class="layer-item">Cash-flowing SMBs</div>
+        </div>
+
+        <div class="engine">
+          <div class="engine-label">TKN Markets Layer</div>
+          <div class="engine-title">Capital Markets Engine</div>
+          <div class="engine-list">
+            <div class="ei">Structuring</div>
+            <div class="ei">Tokenization</div>
+            <div class="ei">Distribution</div>
+            <div class="ei">Reporting</div>
+            <div class="ei">Liquidity</div>
+          </div>
+          <div class="engine-footer">Converts equity + cash flows into standardized financial products</div>
+        </div>
+
+        <div class="layer-stack">
+          <div class="layer-label">Demand Layer</div>
+          <div class="layer-item">Institutional Capital</div>
+          <div class="layer-item">Yield Investors</div>
+          <div class="layer-item">Digital Asset Buyers</div>
+        </div>
+      </div>
+      <div class="flow-labels" aria-hidden="true">
+        <div class="left">Cash Flows →</div>
+        <div class="right">← Capital</div>
+      </div>
+    </div>
+
+    <div class="card-grid cols-3">
+      <div class="metric-card"><div class="v">$900B+</div><div class="l">Annual franchise system revenue</div></div>
+      <div class="metric-card"><div class="v">$20–40B</div><div class="l">Annual capital formation + restructuring</div></div>
+      <div class="metric-card"><div class="v">No market layer</div><div class="l">No standardized liquidity or investor access</div></div>
+    </div>
+
+    <div class="franchise-closing">
+      <p>TKN Markets inserts a capital markets layer between operators and investors — transforming fragmented private cash flows into standardized, investable products.</p>
+    </div>
+  </section>
+
+  <!-- WHY TKN MARKETS / PLATFORM -->
+  <section id="platform" class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">Why TKN Markets</div>
+      <h2>A capital markets platform, not just a tokenization tool.</h2>
+      <p>We combine asset formation, capital distribution, compliance workflows, and liquidity design into one brand architecture built for institutional trust and long-term scale.</p>
+    </div>
+    <div class="card-grid cols-3">
+      <div class="feature-card">
+        <div class="icon-square" aria-hidden="true"></div>
+        <h3>Institutional posture</h3>
+        <p>Designed to feel like market infrastructure from day one, with a brand and stack that can support sponsors, operators, and investors.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-square" aria-hidden="true"></div>
+        <h3>Cash-flow native</h3>
+        <p>Purpose-built for operating assets and recurring cash flows, not only static ownership records or speculative token wrappers.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-square" aria-hidden="true"></div>
+        <h3>Expansion-ready</h3>
+        <p>Structured to evolve from issuance and primary capital into payments, reporting, and secondary market liquidity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS MODEL -->
+  <section id="business-model" class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">Business Model</div>
+      <h2>A diversified, recurring revenue architecture</h2>
+      <p>Designed to scale with assets under management and transaction volume across the TKN Markets platform.</p>
+    </div>
+    <div class="card-grid cols-4">
+      <div class="bm-card">
+        <div class="label">Issuance Fees</div>
+        <div class="v">2–5%</div>
+        <p>Charged at token issuance when HoldCos are structured and funded.</p>
+      </div>
+      <div class="bm-card">
+        <div class="label">AUM Fees</div>
+        <div class="v">1–2%</div>
+        <p>Annual management fees on assets under management.</p>
+      </div>
+      <div class="bm-card">
+        <div class="label">Trading Fees</div>
+        <div class="v">Per Tx</div>
+        <p>Transaction fees on secondary market activity.</p>
+      </div>
+      <div class="bm-card">
+        <div class="label">Data &amp; SaaS</div>
+        <div class="v">Subscription</div>
+        <p>Analytics, reporting, and tools for operators and investors.</p>
+      </div>
+    </div>
+    <div class="bm-closing">
+      <p>A vertically integrated model combining upfront issuance economics, recurring AUM fees, and transaction-driven revenue — scaling with both asset volume and market liquidity.</p>
+    </div>
+  </section>
+
+  <!-- ECOSYSTEM -->
+  <section id="ecosystem" class="section">
+    <div class="eco-grid">
+      <div>
+        <div class="section-eyebrow">Ecosystem</div>
+        <h2 style="margin-top:12px;font-size:1.85rem;">One master brand. Multiple market layers.</h2>
+        <p style="margin-top:16px;font-size:1.05rem;line-height:1.78;">TKN Markets sits at the center of a broader ecosystem designed to own the full life cycle of tokenized asset formation, capital flow, investor access, and transaction infrastructure.</p>
+      </div>
+      <div class="eco-tree-wrap">
+        <div class="eco-tree">
+          <div class="eco-node parent">
+            <div class="label">Parent</div>
+            <div class="name">TKN Group</div>
+          </div>
+          <div class="eco-divider"></div>
+          <div class="eco-node core">
+            <div class="label">Core Platform</div>
+            <div class="name">TKN Markets</div>
+          </div>
+          <div class="eco-divider"></div>
+          <div class="pillar-grid">
+            <div class="pillar">
+              <div class="name">TKN Capital</div>
+              <p>Structured funding solutions for operators seeking growth capital, recapitalization, and non-dilutive liquidity.</p>
+            </div>
+            <div class="pillar">
+              <div class="name">TKN Exchange</div>
+              <p>A future liquidity layer for secondary trading, investor access, and price discovery across tokenized private assets.</p>
+            </div>
+            <div class="pillar">
+              <div class="name">TKN Rail</div>
+              <p>Payments and cash-flow infrastructure designed to connect real operating performance to capital markets products.</p>
+            </div>
+            <div class="pillar">
+              <div class="name">TKN Struct</div>
+              <p>Compliance, packaging, underwriting, and issuance workflows for institutional-grade asset formation.</p>
+            </div>
+          </div>
+          <div class="eco-divider"></div>
+          <div class="eco-node user">
+            <div class="label">User Layer</div>
+            <div class="name">TOKN App</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="section">
+    <div class="section-head">
+      <div class="section-eyebrow">How it Works</div>
+      <h2>Built to move from issuance to liquidity.</h2>
+    </div>
+    <div class="card-grid cols-4">
+      <div class="step-card">
+        <div class="n">01</div>
+        <p>Source high-quality franchise and private market assets</p>
+      </div>
+      <div class="step-card">
+        <div class="n">02</div>
+        <p>Structure compliant tokenized offerings</p>
+      </div>
+      <div class="step-card">
+        <div class="n">03</div>
+        <p>Distribute capital to operators and issuers</p>
+      </div>
+      <div class="step-card">
+        <div class="n">04</div>
+        <p>Enable investor reporting, yield flows, and liquidity over time</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="contact-card">
+      <div class="contact-grid">
+        <div>
+          <div class="section-eyebrow">Launch the category</div>
+          <h2>Position TKN Markets as the market system for tokenized private assets.</h2>
+          <p class="lede">Built for institutional capital, real operating cash flows, and a future where private market assets become programmable, reportable, and liquid.</p>
+        </div>
+        <div class="contact-box">
+          <div class="label">Contact</div>
+          <div class="contact-list">
+            <div>hello@tknmarkets.com</div>
+            <div>Investor Relations</div>
+            <div>New York · Miami · Digital First</div>
+          </div>
+          <button class="btn btn-primary btn-full" type="button">Schedule a Conversation</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="row">
+      <span>© <span id="year">2026</span> TKN Markets</span>
+      <span>·</span>
+      <a href="#platform">Platform</a>
+      <a href="#ecosystem">Ecosystem</a>
+      <a href="#how-it-works">How it Works</a>
+      <a href="#contact">Contact</a>
     </div>
   </footer>
 

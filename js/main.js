@@ -1,34 +1,28 @@
 (function () {
   'use strict';
 
-  const nav = document.getElementById('nav');
-  const toggle = document.getElementById('navToggle');
-  const menu = document.getElementById('navMenu');
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('navMobile');
 
-  if (toggle && menu && nav) {
+  if (toggle && menu) {
     toggle.addEventListener('click', function () {
-      const isOpen = nav.classList.toggle('open');
+      var isOpen = menu.classList.toggle('open');
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      if (isOpen) {
-        menu.hidden = false;
-      } else {
-        menu.hidden = true;
-      }
+      menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
     });
 
     menu.addEventListener('click', function (e) {
-      const target = e.target;
-      if (target instanceof HTMLAnchorElement || (target instanceof HTMLElement && target.closest('a'))) {
-        nav.classList.remove('open');
+      var t = e.target;
+      if (t && (t.tagName === 'A' || (t.closest && t.closest('a')))) {
+        menu.classList.remove('open');
         toggle.setAttribute('aria-expanded', 'false');
-        menu.hidden = true;
+        menu.setAttribute('aria-hidden', 'true');
       }
     });
   }
 
-  const yearEl = document.getElementById('year');
+  var yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
-
 })();
