@@ -81,7 +81,7 @@ Audit and polish pass for mobile widths 360–430px. All changes are surgical CS
 | Contact CTAs | Same: Schedule a Conversation → mailto, email address → clickable mailto link |
 | Core Platform heading | `Issuance + Structuring + Distribution` scales 1.1rem (360px) → 1.25rem (480px) → 1.35rem (768px), preventing cramping |
 | Stat card labels | `overflow-wrap: anywhere` prevents clipping on 360px cards |
-| Franchise diagram | Mobile gap set to 0; CSS `::after` pseudo-elements add 2px gradient vertical connectors between Source Layer → Engine → Demand Layer |
+| Franchise diagram | Mobile gap set to 36px; non-last grid children get `position: relative` + absolutely-positioned `::after` (top: 100%; margin-top: 6px) placing 2px gradient vertical connectors between Source Layer → Engine → Demand Layer |
 | Business model grid | 3-column layout added at 1024px breakpoint (was an abrupt 2→4 jump at 1280px) |
 | Ecosystem tree | `pillar-grid::before` adds horizontal branch line at 640px+, connecting the vertical eco-divider to the 2-column pillar grid as a T-junction |
 | Contact card (mobile) | `h2` reduced from 1.8rem to 1.45rem; `contact-box` gets `border-top` + `padding-top` separator for clearer visual hierarchy |
@@ -114,9 +114,10 @@ When loading from a live HTTP URL inside the iframe, 390px specifically fails wi
 - `docs/screenshots/after-desktop-full.png` — full-page desktop 1440px regression check
 
 ### Live verification (commit c5b05fb)
-- Live CSS confirmed deployed: `flex-direction: column` hero-actions rule present
-- All 4 mobile widths render without horizontal overflow
+- Live CSS confirmed deployed (new etag `6a0f7fc6-4089`)
+- Live mobile screenshots captured at 360/390/414/430px — all 4 widths render without horizontal overflow or clipped text
 - Desktop layout (1440px) unchanged — verified via full-page screenshot
+- End-to-end smoke: all nav anchors (#platform, #ecosystem, #how-it-works, #contact) resolve to valid section IDs; all CTAs are functional `<a>` tags (mailto or anchor); mobile nav toggle opens/closes correctly; smooth scroll enabled; no dead buttons remaining
 
 ## Outstanding notes
 - CTAs are wired to `mailto:hello@tknmarkets.com` — functional but no server-side form. Wire up Formspree or similar for form capture if needed.
