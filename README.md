@@ -24,6 +24,7 @@ demox-site/
   css/style.css     # All styles
   js/main.js        # Mobile nav toggle + footer year
   img/favicon.svg   # TKN cyan radial mark
+  img/social-preview.png # Link preview image for Discord/social cards
   docs/screenshots/ # Desktop + mobile captures
 ```
 

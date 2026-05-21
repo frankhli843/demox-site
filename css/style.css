@@ -561,14 +561,39 @@ p { margin: 0; color: var(--white-70); line-height: 1.7; }
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
+.feature-card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  margin-bottom: 14px;
+}
 .feature-card .icon-square {
+  flex: 0 0 auto;
   height: 44px; width: 44px;
   border-radius: var(--r-md);
-  background: rgba(103, 232, 249, 0.15);
-  margin-bottom: 16px;
+  border: 1px solid rgba(103, 232, 249, 0.35);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(103, 232, 249, 0.38), rgba(13, 78, 179, 0.25) 55%, rgba(6, 18, 45, 0.6) 100%);
+  color: var(--cyan-200);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 14px 34px -18px rgba(79, 215, 255, 0.85);
 }
-.feature-card h3 { font-size: 1.2rem; }
-.feature-card p { margin-top: 12px; line-height: 1.7; color: var(--white-68); }
+.feature-card .icon-square svg {
+  width: 23px;
+  height: 23px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.feature-card h3 {
+  font-size: 1.2rem;
+  line-height: 1.25;
+  min-width: 0;
+}
+.feature-card p { line-height: 1.7; color: var(--white-68); }
 
 /* ---------- Franchise diagram ---------- */
 .franchise-diagram {

@@ -28,6 +28,8 @@ demox-site/
   css/style.css      # All styles (~961 lines)
   js/main.js         # Mobile nav toggle + footer year only
   img/favicon.svg    # TKN-branded circular gradient favicon
+  img/social-preview.png # 1200x630 PNG for Discord/social previews
+  img/social-preview.svg # Source artwork for the preview PNG
   README.md          # How to run / how Pages is wired
   SUMMARY.md         # This document
   docs/screenshots/  # local-desktop, local-mobile, live-desktop, baseline/after/live mobile UX captures
@@ -123,3 +125,23 @@ When loading from a live HTTP URL inside the iframe, 390px specifically fails wi
 - CTAs are wired to `mailto:hello@tknmarkets.com` — functional but no server-side form. Wire up Formspree or similar for form capture if needed.
 - Custom domain not configured. Default `*.github.io` host is HTTPS-enforced.
 - Repo is still named `demox-site` for continuity — only the visible product branding changed.
+
+## Icon and Preview Fix (May 21 2026)
+
+Follow-up from Frank: the feature-card icon and text pairing looked wrong, and the icon was empty.
+
+### Changes shipped
+- Replaced empty `.icon-square` placeholders with real inline SVG icons in all six feature cards.
+- Added `.feature-card-head` so each icon and heading sit on the same row with stable spacing.
+- Reworked `img/favicon.svg` to use vector paths instead of SVG `<text>`, avoiding blank-icon rendering in previews that do not load fonts.
+- Added canonical, Open Graph, Twitter Card, and apple-touch metadata.
+- Added `img/social-preview.png` (1200x630) plus `img/social-preview.svg` source so Discord/social previews have a real image instead of relying on favicon inference.
+
+### Verification
+- Local asset smoke passed for `/`, `css/style.css`, `js/main.js`, `img/favicon.svg`, and `img/social-preview.png`.
+- Static checks passed: 6 feature-card heads, 6 inline card SVG icons, social preview metadata present, canonical URL present.
+- XML parse passed for `img/favicon.svg` and `img/social-preview.svg`.
+- PNG signature/dimensions verified for `img/social-preview.png` (1200x630).
+- Fresh screenshots captured:
+  - `docs/screenshots/after-mobile-icons-390.png`
+  - `docs/screenshots/after-desktop-icons.png`
