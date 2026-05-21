@@ -1,6 +1,12 @@
-# Demox
+# TKN Markets — site
 
-A demonstration marketplace landing page for real-world asset investing. Self-contained static HTML/CSS/JS with no build step, deployed via GitHub Pages.
+A static landing page for TKN Markets (a tokenized capital markets infrastructure concept), deployed via GitHub Pages. Single-page, vanilla HTML/CSS/JS, no build step.
+
+## Public URL
+
+https://frankhli843.github.io/demox-site/
+
+The repo name remains `demox-site` from an earlier iteration so the URL stays stable. The site itself is now branded as TKN Markets.
 
 ## Local preview
 
@@ -14,16 +20,13 @@ python3 -m http.server 8080
 
 ```
 demox-site/
-  index.html       # Landing page
-  css/style.css    # All styles
-  js/main.js       # Nav toggle + footer year
-  img/favicon.svg  # Original SVG mark
+  index.html        # Landing page (single page, anchor nav)
+  css/style.css     # All styles
+  js/main.js        # Mobile nav toggle + footer year
+  img/favicon.svg   # TKN cyan radial mark
+  docs/screenshots/ # Desktop + mobile captures
 ```
 
 ## Deployment
 
-GitHub Pages serves the `main` branch root. Push to `main` and Pages publishes automatically at https://frankhli843.github.io/demox-site/.
-
-## Notes
-
-This is an original Demox-branded implementation. The layout takes inspiration from common real-world-asset marketplace landing pages but does not copy any third-party branding, copy, or source. All visuals are built from CSS and inline SVG.
+GitHub Pages serves the `main` branch root. Push to `main` and Pages publishes automatically.
