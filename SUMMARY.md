@@ -1,72 +1,74 @@
-# Demox — build & deployment summary
+# TKN Markets — build & deployment summary
+
+> **Repository origin:** The GitHub repo is still named `demox-site` (and the GitHub Pages URL still uses that path) because the thread and deployed artifact already existed there. The visible product is now TKN Markets. Historical README notes explain the naming.
 
 ## Public URL
 - Live: https://frankhli843.github.io/demox-site/
 - Repo: https://github.com/frankhli843/demox-site
 - Branch: `main`
-- Latest deployment: `main` branch HEAD
+- Latest deployment: commit `fb240cb` (May 21, 2026)
 
 ## Origin
-Recovered Discord request (channel/thread `1506714904449777715`): build a public GitHub-hosted demo site named Demox, inspired by the structure of a real-world-asset marketplace landing page, to demonstrate AI website-building capability. Originating Codex session stalled before delivering anything. This run started fresh.
+Discord thread `1506714904449777715` — Frank asked to replace the prior StegX-style Demox page with a clone of the TKN Markets Canvas:
+https://chatgpt.com/canvas/shared/69d586b13c688191ab110ba9b47a7f23
 
-## Boundary
-Demox is an **original, demonstration brand**. No third-party logos, copy, image assets, scripts, or source files were copied. Layout shape (fixed nav, hero with right-side dashboard mock, dual investor/issuer split, marketplace deal grid, asset categories, four-step process, ecosystem band, CTA, footer) takes inspiration from common real-world-asset marketplace landing pages, but every line of HTML, CSS, JS, and copy here was authored from scratch.
+Canvas title: "Copy of Tkn Markets Homepage". This supersedes the completed Demox/StegX task t_01KS3A0B6AKZZT88T9TTAX7YMZ.
 
 ## Stack
-- Vanilla static HTML / CSS / JS (no build step)
+- Vanilla static HTML / CSS / JS (no build step required)
 - Google Fonts: Inter (body) + Space Grotesk (display)
-- All visuals are CSS + inline SVG (no external image hotlinks)
+- All visuals are CSS + inline SVG — no external image hotlinks
 - Deployed via GitHub Pages, source branch `main`, root path
+- Local run: `python3 -m http.server 9876` then open http://localhost:9876/
 
 ## Structure
 ```
 demox-site/
   index.html         # Landing page (single page, anchor nav)
-  css/style.css      # All styles (~22kB)
-  js/main.js         # Mobile nav toggle + footer year
-  img/favicon.svg    # Original SVG mark
+  css/style.css      # All styles (~886 lines)
+  js/main.js         # Mobile nav toggle + footer year only
+  img/favicon.svg    # TKN-branded circular gradient favicon
   README.md          # How to run / how Pages is wired
   SUMMARY.md         # This document
-  docs/screenshots/  # Live-URL desktop + mobile captures
+  docs/screenshots/  # local-desktop, local-mobile, live-desktop captures
   .nojekyll          # Skip Jekyll, serve files as-is
 ```
 
-## Sections (matches acceptance criteria)
-1. Sticky nav (logo, anchor links, Invest / Originate CTAs, mobile hamburger menu)
-2. Hero — headline + dual CTAs + animated CSS dashboard mock on the right
-3. Trust marquee band — proof points in compact uppercase row
-4. Investor / Issuer split — two large feature cards with check-lists and CTAs
-5. Live marketplace — 6 deal cards across credit / real estate / infrastructure / growth, with metrics, allocation bar, and "View memo" CTA
-6. Asset universe — 6 category tiles with original copy
-7. How it works — 4-step process
-8. Ecosystem — 6 partner-role cards (custody, fund admin, audit, identity, trustee, legal)
-9. CTA band — final dual call-to-action
-10. Footer — brand + 3 link columns + legal disclaimer + auto-year
+## Page Sections (matches Canvas structure)
+1. **Nav** — rounded sticky nav, TKN MARKETS brand, Platform / Ecosystem / How it Works / Contact anchor links, mobile hamburger
+2. **Hero** — eyebrow chip, headline "A tokenized capital marketplace for private business.", two CTAs (Request Investor Deck / Explore the Platform), 4 stat cards (Institutional / Full-stack / RWA / Yield + Liquidity), right-side Platform Overview card with Issuance+Structuring+Distribution / Operators / Investors / Ecosystem Layers panels
+3. **Why Now** — 3 feature cards covering Massive illiquid market / Technology unlock / Investor demand shift
+4. **Initial Market Focus** — franchise diagram (source layer → TKN Markets engine → demand layer), 3 metric cards ($900B+ / $20–40B / No market layer)
+5. **Why TKN Markets** — 3 feature cards (Institutional posture / Cash-flow native / Expansion-ready)
+6. **Business Model** — 4 revenue stream cards (Issuance Fees 2–5% / AUM Fees 1–2% / Trading Fees per Tx / Data & SaaS subscription)
+7. **Ecosystem** — TKN Group → TKN Markets → TKN Capital / TKN Exchange / TKN Rail / TKN Struct → TOKN App hierarchy
+8. **How it Works** — 4-step process (Source → Structure → Distribute → Enable liquidity)
+9. **Contact** — institutional CTA card with hello@tknmarkets.com and "Schedule a Conversation" button
+10. **Footer** — TKN Markets copyright, anchor links
 
-## Design tokens
-- Background: deep navy `#0a0b14` → `#161936` gradient field
-- Accent: violet `#7b5cff` → blue `#4fb6ff` gradient
-- Secondary accent: amber `#f3a36c` for issuer-side surfaces (deliberate contrast variation, not a flat purple monolith)
+## Design Tokens
+- Background: deep navy `#06122d` base
+- Accent: cyan `#4fd7ff` / `#67e8f9`
+- Surfaces: slate glass panels with `rgba(255,255,255,0.05-0.08)` backgrounds
 - Typography: Space Grotesk (display) / Inter (body)
-- Radius scale: 8 / 14 / 22 px
-- Responsive breakpoints at 1024px (3-col → 2-col) and 760px (2-col → 1-col + hamburger)
+- Responsive breakpoints at ~900px (grid stacking) and mobile
 
 ## Verification
 
-### Local
-- `python3 -m http.server 8741` served the site
-- `curl -s http://127.0.0.1:8741/` → HTTP 200, full HTML
-- Headless desktop (1440×3500) and mobile (390×4800) Chrome captures inspected. Initial captures showed pre-paint dim sections due to a timing issue; that mechanism was removed in commit `dd0d2fe`. Re-captures show every section fully rendered.
-- QA patch removed discrete decorative hero glow elements, fixed mobile horizontal overflow, and kept the marketplace dashboard mock as the primary visual.
+### Local (commit fb240cb)
+- `python3 -m http.server 9876` served the site at http://localhost:9876/
+- `curl` verified 200 OK on index.html, css/style.css, js/main.js, img/favicon.svg
+- Playwright desktop (1440×900) and mobile (390×844) screenshots captured and reviewed
+- No Demox/StegX references in any file
 
 ### Live (public URL)
-- `curl -sIL https://frankhli843.github.io/demox-site/` → HTTP 200 from `server: GitHub.com`
-- `css/style.css`, `js/main.js`, `img/favicon.svg` all return HTTP 200 with expected byte counts
-- Pages build reached `status: built`
-- Headless captures of the live URL saved at `docs/screenshots/live-desktop.png` and `docs/screenshots/live-mobile.png`
-- Mobile capture confirms hero, dashboard mock, split cards, deal grid all stack cleanly with readable type and no overlap
+- `curl -sI https://frankhli843.github.io/demox-site/` → HTTP 200, `server: GitHub.com`
+- Title: `TKN Markets — A tokenized capital marketplace for private business`
+- 25 TKN references, 0 Demox/StegX references in live HTML
+- All assets (css, js, favicon) return HTTP 200 with correct content-types
+- Live desktop screenshot saved at `docs/screenshots/live-desktop.png`
 
-## Outstanding risk / follow-up
-- Site is intentionally a single-page demo. Anchor links cover all nav targets. There are no real subscription / form endpoints — every CTA is a `#section` anchor by design.
-- Custom domain is not configured. Default `*.github.io` host is HTTPS-enforced.
-- If Frank later wants a real form (contact, waitlist), wire up Formspree or similar — no backend exists today.
+## Outstanding notes
+- CTAs (Request Investor Deck, Schedule a Conversation) are stub buttons — no real endpoint. Wire up Formspree or similar if a real form is needed.
+- Custom domain not configured. Default `*.github.io` host is HTTPS-enforced.
+- Repo is still named `demox-site` for continuity — only the visible product branding changed.
